@@ -18,7 +18,10 @@ $(document).ready(function () {
 
          event.preventDefault();
 
-         
+         var newtopic = $("#newadd").val().trim();
+         newtopic.push(topics);
+
+         displayButtons();
 
 
       }

@@ -11,6 +11,15 @@ $(document).ready(function () {
          newBtn.attr('data-name', topics[i]);
          newBtn.text(topics[i]);
          $("#btnarray").append(newBtn);
+      };
+      };
+
+      $("#submitbtn").on("click", function() {
+
+         event.preventDefault();
+
+         
+
 
       }
       $("button").on("click", function() {
@@ -18,7 +27,7 @@ $(document).ready(function () {
    
          // Constructing a URL to search Giphy for the nam
          var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-           image + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
+           image + "&api_key=71clL2OHtaJ5wO26bXXxDMXMqiC44LE8&limit=10";
    
          // Performing our AJAX GET request
          $.ajax({
@@ -27,8 +36,8 @@ $(document).ready(function () {
          })
            // After the data comes back from the API
            .then(function(response) {
+            console.log (response);
 
-            
 
 
       });

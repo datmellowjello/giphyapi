@@ -3,6 +3,8 @@ $(document).ready(function () {
    var topics = ["jeep", "Hummer", "farrari", "bently", "porshe", "audi", "bugatti", "rollsroyce", "bmw", "tesla"]
 
    function displayButtons() {
+      $('#btnarray').empty();
+
       for (i = 0; i < topics.length; i++) {
          var newBtn = $('<button type="button">')
 
@@ -19,12 +21,12 @@ $(document).ready(function () {
          event.preventDefault();
 
          var newtopic = $("#newadd").val().trim();
-         newtopic.push(topics);
+         topics.push(newtopic);
 
          displayButtons();
 
 
-      }
+      });
       $("button").on("click", function() {
          var image = $(this).attr("data-name");
    

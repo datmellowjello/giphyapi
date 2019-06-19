@@ -27,12 +27,12 @@ $(document).ready(function () {
 
 
       });
-      $("button").on("click", function() {
+      $(document).on("click", function() {
          var image = $(this).attr("data-name");
    
          // Constructing a URL to search Giphy for the nam
          var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-           image + "&api_key=71clL2OHtaJ5wO26bXXxDMXMqiC44LE8&limit=10";
+           image + "&api_key=71clL2OHtaJ5wO26bXXxDMXMqiC44LE8";
    
          // Performing our AJAX GET request
          $.ajax({
@@ -41,7 +41,10 @@ $(document).ready(function () {
          })
            // After the data comes back from the API
            .then(function(response) {
-            console.log (response);
+            var results = response.data;
+            console.log(response)
+            console.log(results);
+
 
 
 

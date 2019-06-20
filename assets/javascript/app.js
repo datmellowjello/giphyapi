@@ -11,7 +11,7 @@ $(document).ready(function () {
          // $("#btnarray").append("<button>" + topics[i] +" </button>");
          // $("button").attr("data-car="topics[i]"")
          newBtn.attr('data-name', topics[i]);
-         newBtn.addClass("button1")
+         newBtn.addClass("button1");
          newBtn.text(topics[i]);
          $("#btnarray").append(newBtn);
       };
@@ -23,16 +23,17 @@ $(document).ready(function () {
       event.preventDefault();
 
       var newtopic = $("#newadd").val().trim();
+
       topics.push(newtopic);
 
       displayButtons();
 
 
    });
-   $('.button1').on("click", function () {
+   $(document).on("click", ".button1", function () {
       var image = $(this).attr("data-name");
       var apikey = "&api_key=71clL2OHtaJ5wO26bXXxDMXMqiC44LE8"
-      // Constructing a URL to search Giphy for the nam
+      // Constructing a URL to search Giphy for the name
       var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
          image + apikey +"&limit=10";
       console.log(queryURL);
@@ -89,9 +90,7 @@ $(document).ready(function () {
    // function changeGif () {
       $(document).on("click", ".imgimg", function() {
          var state = $(this).attr("data-state");
-         // If the clicked image's state is still, update its src attribute to what its data-animate value is.
-         // Then, set the image's data-state to animate
-         // Else set src to the data-still value
+
          if (state === "still") {
            $(this).attr("src", $(this).attr("data-animate"));
            $(this).attr("data-state", "animate");

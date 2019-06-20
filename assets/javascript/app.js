@@ -34,7 +34,7 @@ $(document).ready(function () {
       var image = $(this).attr("data-name");
       var apikey = "&api_key=71clL2OHtaJ5wO26bXXxDMXMqiC44LE8"
       // Constructing a URL to search Giphy for the name
-      var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
+      var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
          image + apikey +"&limit=10";
       console.log(queryURL);
       // Performing our AJAX GET request

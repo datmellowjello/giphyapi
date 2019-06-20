@@ -1,3 +1,6 @@
+body {
+    background-image: url("http://www.sclance.com/backgrounds/race-track-background/race-track-background_1854353.jpg");
+}
 .button1 {
     margin: 3px;
 }
@@ -10,4 +13,11 @@
 }
 .add-btn {
     padding: 10px;
+}
+#yoyo {
+    background-color: lightgray;
+}
+.jumbotron {
+    display: flex;
+    align-items: center;
 }

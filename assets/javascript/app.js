@@ -49,7 +49,7 @@ $(document).ready(function () {
             for (var i = 0; i < results.length; i++) {
                console.log(results);
                console.log(queryURL);
-               var gifDiv = $("<div>");
+               var gifDiv = $('<div>');
 
                var rating = results[i].rating;
 
@@ -66,6 +66,7 @@ $(document).ready(function () {
                stillgif.attr("data-still", results[i].images.fixed_height_still.url);
                stillgif.attr("data-animate", results[i].images.fixed_height.url);
                stillgif.addClass("imgimg")
+               
 
                // movinggif.attr("src", results[i].images.fixed_height.url);
                // movinggif.attr("data-value", "moving");

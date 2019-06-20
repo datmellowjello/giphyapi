@@ -61,9 +61,9 @@ $(document).ready(function () {
                // movinggif.attr("src", results[i].images.fixed_height.url);
                // movinggif.attr("data-ani", "moving");
 
-               stillgif.attr("src", results[i].images.original_still.url);
+               stillgif.attr("src", results[i].images.fixed_height_still.url);
                stillgif.attr("data-value", "still");
-               stillgif.attr("data-still", results[i].images.original_still.url);
+               stillgif.attr("data-still", results[i].images.fixed_height_still.url);
                stillgif.attr("data-animate", results[i].images.fixed_height.url);
                stillgif.addClass("imgimg")
 
